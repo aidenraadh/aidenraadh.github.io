@@ -1,0 +1,242 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="6n9CQsY6IM4QMV1RVuDwW8wt49gUDSgHoiYoDFG1">
+    <title>Recruit - Job Openings</title>
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+  
+<nav class="navbar openSans">
+  <button class="opnNavItems">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" style="width: 4rem;">
+      <path d="M0 1.5 L10 1.5 L10 2.5 L0 2.5" style="fill: #E6E6E6;"/>
+      <path d="M0 4.5 L6 4.5 L6 5.5 L0 5.5" style="fill: #E6E6E6;"/>
+      <path d="M0 7.5 L10 7.5 L10 8.5 L0 8.5" style="fill: #E6E6E6;"/> 
+    </svg>
+  </button>
+  <div class="navItems hidden">
+    <div class="navHead">
+      <button class="clsNavItems">&times;</button>
+      <span class="userTitle openSansSemibold">Recruit</span>
+    </div>
+    <div class="languages">
+      <div class="sprite"></div><a href="#">EN</a>|<a href="#">ID</a>|<a href="#">FR</a>
+    </div>
+    <span class="userName openSansSemibold">recruit1</span>
+    <ul>
+      <li><a href="home.html"><div class="sprite"></div><span>Dashboard</span></a></li>
+      <li><a href="jobopening.html"><div class="sprite"></div><span>Job Openings</span></a></li>
+      <li><a href="jobapplication.html"><div class="sprite"></div><span>Job Applications</span></a></li>
+      <li><a href="../landing.html"><div class="sprite"></div><span>Logout</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="usersMainHeading montserratSemibold">Job Openings</h1>
+
+<!-- <div class="actions-container openSans">
+  <button class="selectAll" type="button">
+    <div class="sprite1"></div>
+    <span>Select All</span>
+  </button>
+  <button class="addJobPosting" type="button" modalid="addJobPostingMdl">
+    <div class="sprite1"></div>
+    <span>Add</span>
+  </button>
+  <button class="deleteJobPosting" type="button" msg="Are you sure want to delete these jobs?" formid="deleteJobPosting">
+    <div class="sprite1"></div>
+    <span>Delete</span>
+  </button>
+  <button class="openJobPosting" type="button" msg="Are you sure want to open these jobs?" formid="openJobPosting">
+    <div class="sprite1"></div>
+    <span>Open</span>
+  </button>
+  <button class="closeJobPosting" type="button" msg="Are you sure want to close these files?" formid="closeJobPosting">
+    <div class="sprite1"></div>
+    <span>Close</span>
+  </button> 
+</div> -->
+
+
+
+<section class="sectionPadding openSans" style="font-size: 1.6rem; color: #1A1A1A;">
+  <!--<div class="openSansSemibold" style="text-align: center; font-size: 2rem; color: #4D4D4D;">You Haven't Post Any Job</div>-->
+<div class="cards1Container">
+
+  <div class="cards1">
+    <button class="viewJobPosting" type="button" modalid="viewJobPostingMdl" jobid="1" opnat="2019-12-08 18:55:36">
+      <div class="cardsBody">
+        <div class="cardsIcon">
+          <div></div>
+        </div>
+        <div class="cardsDesc">
+            <span class="jobtitle">Carpenter</span>
+            <span class="jobid">Job ID: 1</span>          
+        </div> 
+        <span class="jobstatus opened">Opened</span> 
+      </div>
+      <div class="cardsFooter">
+        Created At: 2019-11-20 00:18:54
+      </div>
+    </button>
+    <label class="cbContainer">
+      <input class="items" type="checkbox" name="item[]" value="1">
+      <span class="checkmark"></span>
+      <!--<input class="subitems" type="hidden">-->
+    </label>
+  </div>
+
+  <div class="cards1">
+    <button class="viewJobPosting openSans" type="button" modalid="viewJobPostingMdl" jobid="1" opnat="2019-12-08 18:55:36">
+      <div class="cardsBody">
+        <div class="cardsIcon">
+          <div></div>
+        </div>
+        <div class="cardsDesc">
+            <span class="jobtitle">Front-End Developer</span>
+            <span class="jobid">Job ID: 2</span>          
+        </div> 
+        <span class="jobstatus opened">Opened</span> 
+      </div>
+      <div class="cardsFooter">
+        Created At: 2019-11-20 00:18:54
+      </div>
+    </button>
+    <label class="cbContainer">
+      <input class="items" type="checkbox" name="item[]" value="1">
+      <span class="checkmark"></span>
+      <!--<input class="subitems" type="hidden">-->
+    </label>
+  </div>
+
+  <div class="cards1">
+    <button class="viewJobPosting openSans" type="button" modalid="viewJobPostingMdl" jobid="1" opnat="2019-12-08 18:55:36">
+      <div class="cardsBody">
+        <div class="cardsIcon">
+          <div></div>
+        </div>
+        <div class="cardsDesc">
+            <span class="jobtitle">Data Scientist</span>
+            <span class="jobid">Job ID: 4</span>          
+        </div> 
+        <span class="jobstatus opened">Opened</span> 
+      </div>
+      <div class="cardsFooter">
+        Created At: 2019-11-20 00:18:54
+      </div>
+    </button>
+    <label class="cbContainer">
+      <input class="items" type="checkbox" name="item[]" value="1">
+      <span class="checkmark"></span>
+      <!--<input class="subitems" type="hidden">-->
+    </label>
+  </div>
+
+</div>
+</section>
+
+<div class="modalContainer hidden">
+  <!--
+    Base modal element
+  <section id="__modal__id" class="modal openSans">
+    <div class="modalHeader">
+      <h2 class="montserratSemibold">Heading</h2>
+      <button type="button" class="clsModal openSans" modalid="__modalid__">&times;</button>
+    </div>
+    <div class="modalBody">
+    <div>
+             
+    </div>      
+    </div>
+  </section>
+-->
+
+  <section id="addJobPostingMdl" class="modal openSans hidden">
+    <div class="modalHeader">
+      <h2 class="montserratSemibold">Add New Job Posting</h2>
+      <button type="button" class="clsModal openSans">&times;</button>
+    </div>
+    <div class="modalBody">
+    <div>
+      <form class="Form">
+        <label class="Label">
+          <input class="Input openSans" type="text" name="JobTitle" placeholder="Job Title" required autofocus>
+          <svg viewBox="0 0 20 20" class="Icon">
+            <path d="M0 0 L10 10 L0 20"></path>
+          </svg>          
+        </label>
+        <label class="Label">
+          <input class="Input openSans" type="text" name="JobLocation" placeholder="Job Location" required autofocus>
+          <svg viewBox="0 0 20 20" class="Icon">
+            <path d="M0 0 L10 10 L0 20"></path>
+          </svg>          
+        </label>
+        <div>
+          <textarea class="textarea openSans" name="JobDescription" placeholder="Job Description" required></textarea>
+        </div>
+        <button type="submit" class="btn1">Post</button>
+      </form> 
+    </div>
+    </div>
+  </section>
+
+  <section id="viewJobPostingMdl" class="modal openSans hidden">
+    <div class="modalHeader">
+      <h2 class="montserratSemibold">Job Posting</h2>
+      <button type="button" class="clsModal openSans">&times;</button>
+    </div>
+    <div class="modalBody">
+    <div>
+      <div class="jobinfo">
+        <span class="jobtitle openSansSemibold"></span>
+        <span class="joblocation getAJAX">Lorem Ipsum</span>
+        <span class="date"></span>
+        <button type="button" class="editJobPosting btn1 openSans">Edit</button>
+      </div>
+      <hr>
+      <p class="getAJAX">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <hr>
+    </div>      
+    </div>
+  </section>
+
+<section class="prompt openSans hidden">
+  <span class="msg"></span>
+  <div class="prompt-actions">
+    <button type="button" class="submitItemsBtn btn1" formid="">Continue</button>
+    <button type="button" class="clsPrompt btn3">Cancel</button>
+  </div>
+</section> 
+
+</div> 
+
+<!-- <form id="deleteJobPosting" method="POST">
+  @csrf
+</form>
+
+<form id="openJobPosting" method="POST">
+  @csrf
+</form>
+
+<form id="closeJobPosting" method="POST">
+  @csrf
+</form> -->
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../js/app.js"></script>
+
+
+</body>
+</html>
+
+

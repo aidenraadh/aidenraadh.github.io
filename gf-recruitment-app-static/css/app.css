@@ -1,0 +1,1282 @@
+/*----------------------------------------
+#                                        #
+#              Global Rules              #
+#                                        #
+------------------------------------------*/
+
+html {
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*{
+	box-sizing: border-box; 
+	padding: 0; margin: 0;
+}
+
+@font-face{
+  font-family: 'Open Sans';
+  font-style: normal; font-weight: 400;
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+.openSans{
+  font-family: 'Open Sans', sans-serif;
+}
+
+@font-face{
+  font-family: 'Open Sans Semibold';
+  font-style: normal; font-weight: 400;
+  src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+.openSansSemibold{
+  font-family: 'Open Sans Semibold', sans-serif;
+}
+
+@font-face{
+  font-family: 'Monserrat Semibold';
+  font-style: normal; font-weight: 400;
+  src: url('../fonts/Montserrat-SemiBold.otf') format('truetype');
+}
+
+.montserratSemibold{
+  font-family: 'Monserrat Semibold', sans-serif;
+}
+
+
+
+.container-fluid:before,
+.container-fluid:after{
+  content: " ";
+  display: table;
+}
+
+.container-fluid:after{clear: both;}
+
+body{background-color: #F4FEFF;}
+
+.btn1, .btn2, .btn3{
+	display: inline-block;
+  padding: 0.5em 1.2em;
+	border-radius: 0.87em;
+  border: none;
+	text-align: center;
+	text-decoration: none;
+	color: #F2FFF8;
+	background-clip: border-box;
+	box-shadow: 0 0 3px 1px rgba(2,39,119,0.17);
+	cursor: pointer;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.btn1{background-color: #3CB371;}
+
+.btn2{background-color: #3B5FCC;}
+
+.btn3{background-color: #C94F4F;}
+
+.btn1:hover, .btn2:hover, .btn3:hover, .btn1:focus, .btn2:focus, .btn3:focus{
+  box-shadow: 0 9px 30px 0 rgba(2,39,119,0.17);
+  transform: scale(1.02);
+}
+
+h1.usersMainHeading{
+  padding-top: 10rem;
+  margin-bottom: 3.2rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #4D4D4D;
+}
+
+.darkOverlay{
+  background-color: rgba(67,84,75,0.6);
+}
+
+/*----------------------------------------
+#                                        #
+#             Section's Padding          #
+#                                        #
+------------------------------------------*/
+
+.sectionPadding{
+  padding: 0 10vw 10vw;
+}
+
+
+/*----------------------------------------
+#                                        #
+#                 Forms                  # 
+#                                        #
+------------------------------------------*/
+
+.Form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Input{
+  flex-grow: 1;
+  font-size: 1.6rem;
+  display: block;
+  color: #333333;
+  border: none;
+  padding: 0.5em 0;
+  line-height: 1;
+  background-color: transparent;
+  transition: border-color 0.2s;
+  border-bottom: 0.139em solid #38A66A;
+  outline: none;
+}
+
+.Icon{
+  order: -1;
+  width: 1.8rem;
+  opacity: 0;
+  transform: translateX(-100%);  
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.Input:focus + .Icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.Icon path {
+  stroke: #38A66A;
+  stroke-width: 0.139em;
+  fill: none;
+}
+
+.textarea{
+display: block;
+width: 100%;
+padding: 0.375em 0.75em;
+font-size: 1.6rem;
+line-height: 1.5em;
+color: #333333;
+cursor: text;
+background-color: #fff;
+border: 1px solid #ced4da;
+border-radius: 0.25em;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.textarea:focus{
+color: #495057;
+background-color: #fff;
+border-color: #80bdff;
+outline: 0;
+box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/*----------------------------------------
+#                                        #
+#             Landing Section            #
+#                                        #
+------------------------------------------*/
+
+.landing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('../images/gf_wallpaper1.jpg') no-repeat scroll 0 0;
+  background-size: 100vw auto;
+  height: 100vh;
+}
+
+.landing h1{
+  margin-bottom: 2.5rem;
+  font-size: 3.5rem;
+  color: #EEFFF6;
+}
+
+.landing .darkOverlay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  color: #EEFFF6;
+  padding: 3rem;
+}
+
+.landing .darkOverlay > div{
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.landing .darkOverlay > div > a{
+  color: #EEFFF6;
+  text-decoration: underline;
+}
+
+.landing .btn1, .landing .btn2{
+  margin-bottom: 0.5em;
+  font-size: 1.8rem;
+  width: 20rem;
+}
+
+/*----------------------------------------
+#                                        #
+#           Authentication Pages         #
+#                                        #
+------------------------------------------*/
+
+.AuthSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: url('../images/gf_wallpaper1.jpg') no-repeat scroll 0 0;
+  background-size: 100vw auto;
+}
+
+.AuthSection .Form {
+  width: 42rem;
+  margin-top: 7rem;
+  padding: 4rem;
+}
+
+.AuthSection h1{
+  text-align: center;
+  font-size: 3.5rem;
+  color: #EEFFF6;
+  margin-bottom: 2rem;
+}
+
+.AuthSection .Label {
+  padding-right:  1.5rem;
+  margin-bottom: 2rem;
+}
+
+.AuthSection .Input {
+  color: #EEFFF6;
+  transition: border-color 0.2s;
+  border-bottom: 0.139em solid #47D185;
+}
+
+.AuthSection .Input::placeholder{color: #C7D6CE;}
+
+.AuthSection .Input:focus {
+  outline: none;
+  border-color: #51ED97;
+}
+
+.AuthSection .Icon {
+  width: 1.8rem;
+  opacity: 0;
+  order: -1;
+  transition: all 0.2s;
+  transform: translateX(-100%);
+}
+
+.AuthSection .Icon path {
+  stroke: #EEFFF6;
+}
+
+
+
+.AuthSection .errMsg{
+  width: 100%;
+  font-size: 1.4rem;
+  padding-top: 0.4em;
+  padding-left: 1.25em;
+  color: #EEFFF6;
+}
+
+.AuthSection .Form button{
+  margin-left: auto; margin-right: auto;
+  width: 15rem;
+  font-size: 1.8rem;
+}
+
+/*----------------------------------------
+#                                        #
+#                Checkbox                #
+#                                        #
+------------------------------------------*/
+
+.cbContainer {display: block;
+  position: relative;
+  padding-left: 35px; /*changeable -- give space between custom checkbox and the text beside it*/
+  cursor: pointer;
+  font-size: 22px; /* changeable -- font size of text beside checkbox */
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+/* Hide the browser's default checkbox */
+.cbContainer input {
+  opacity: 0; /* hide the the default checkbox without using display: none; */
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0; left: 0; /* changeable -- adjust the custom checkbox position with the text beside it */
+  height: 2.5rem; width: 2.5rem; /* changeable -- dimension of custom checkbox */
+  background-color: #eee; /* changeable -- background color of custom checkbox */
+  transition: background-color 0.2s ease;
+}
+/* Style the checkmark/indicator */
+/* the checkmark is made by the span element's left and bottom border, the the span element is rotated 45 degree to appear properly*/
+.checkmark:after {
+  content: "";
+  display: none; /* hide the checkmark if checkbox is not checked */
+  position: absolute;
+  left: 0.9rem; top: 0.5rem; /* changealbe -- adjust the position of checkmark againts checkbox */
+  width: 0.5rem; height: 1rem; /* changealbe -- the dimension of checkmark */
+  border-style: solid; 
+  border-color: white; /* changealbe -- change the checkmark color */
+  border-width: 0 0.3rem 0.3rem 0; /* changealbe -- the boldness of checkmark */
+  transform: rotate(45deg); /* changealbe -- rotate the checkmark to appear properly */
+}
+/* On mouse-over, add a grey background color */
+.cbContainer:hover input ~ .checkmark {
+  background-color: #ccc; /* changeable -- change background color of custom checkbox when it's label element is hovered */
+}
+
+/* When the checkbox is checked, add a blue background */
+.cbContainer .items:checked ~ .checkmark {
+  background-color: #0071BC; /* changeable -- change background color of custom checkbox is checked */
+}
+
+
+/* Show the checkmark when checked */
+.cbContainer .items:checked ~ .checkmark:after {
+  display: block;
+}
+
+.subitems{}
+
+/*----------------------------------------
+#                                        #
+#             .cards Element             #
+#                                        #
+------------------------------------------*/
+
+
+/*
+border: 1px solid #F4F6Fb;
+border-radius: 6px;
+text-align: left;
+word-wrap: break-word;
+text-decoration: none;
+color: #404040;
+background-color: transparent;
+background-clip: border-box;
+box-shadow: 0 0 3px 1px rgba(2,39,119,0.17);
+cursor: pointer;
+outline: none;
+transition: 0.3s box-shadow ease;
+
+:hover
+box-shadow: 0 9px 30px 0 rgba(2,39,119,0.17);
+*/
+.cards1Container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-left: auto; margin-right: auto;
+  width: 100%;
+}
+.cards1{
+  display: flex;
+  width: auto;
+  margin-top: 1rem; margin-bottom: 1rem;
+  background-color: transparent;
+}
+.cards1 > button{
+  padding: 1rem;
+  width: 29rem;
+  border: 0.1rem solid #F4F6Fb;
+  border-radius: 0.6rem;
+  text-align: left;
+  word-wrap: break-word;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #4D4D4D;
+  background-color: transparent;
+  background-clip: border-box;
+  box-shadow: 0 0 0.3rem 0.1rem rgba(2,39,119,0.17);
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s box-shadow ease;
+}
+
+.cards1 .cardsBody{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.cards1 .cardsIcon{
+  width: 25%;
+}
+.cardsIcon > div{
+  height: 5rem;
+  width: 5.5rem;
+  background: url('../images/jobicon.png') no-repeat scroll 0 0;
+  background-size: auto 5rem;
+}
+
+.cards1 .cardsDesc{
+  width: 85%;
+}
+
+.cards1 .cardsDesc > span{
+  overflow: hidden;
+  display: block;
+  width: 65%;
+  white-space: nowrap;
+  text-overflow: ellipsis;  
+}
+
+.cards1 .jobstatus{
+  position: absolute; top: 0; right: 0;
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 0.4em;
+  border: none;
+  font-size: 1.2rem;
+  color: #F2FFF8;
+}
+
+.jobstatus.opened{background-color: #3CB371;}
+
+.jobstatus.closed{background-color: #C94F4F;}
+
+.cardsFooter{
+  margin-top: 0.9rem;
+  border-top: 0.2rem solid #3CB371;
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #404040;
+}
+
+.cards1 .cbContainer{
+  width: 3.5rem;
+  margin-left: 1rem;
+}
+
+.cards1 > button:hover, .cards1 > button:focus{
+  box-shadow: 0 0.9rem 3rem 0 rgba(2,39,119,0.17);
+}
+/*
+.letterIcon, .videoIcon{
+  width: 6.9rem; height: 5.6rem;
+  background: url('../images/letters_videos.png') no-repeat scroll;
+  background-size: auto 5.5rem;
+  margin-right: 0.6rem;
+}
+
+.letterIcon{background-position: 0 0;}
+
+.videoIcon{background-position: -7.3rem 0;}
+
+.letter-video-header{width: 15.3rem;}
+
+.letter-video-header > span{
+  display: block; width: 100%;
+  word-wrap: break-word;
+}
+
+.letter-video-action{
+  width: 25%;
+  display: flex; flex-direction: column;
+  margin: 0 0.4rem; 
+}
+
+.letter-video-action > button{
+  width: 100%;
+  font-size: 1.6rem;
+  margin-top: 0.5rem; margin-bottom: 0.5rem;
+}
+*/
+
+
+/*----------------------------------------
+#                                        #
+#               Users Pages              #
+#                                        #
+------------------------------------------*/
+
+/*----------------------------------------
+#                                        #
+#               Navbar                   #
+#                                        #
+------------------------------------------*/
+.navbar{
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 1.8rem;
+  color: #E6E6E6;
+  background-color: #0066A6;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.navbar .sprite{
+  display: inline-block;
+  width: 4rem; height: 3.5rem;
+  margin-right: 1rem;
+  background: url('../images/navbarSprite.png') no-repeat scroll 0 0;
+  background-size: auto 3.5rem;
+}
+
+.opnNavItems, .clsNavItems{
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  color: #E6E6E6;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.opnNavItems{margin: 1rem;}
+
+.navItems{
+  position: fixed;
+  height: 100%;
+  width: 35rem;
+  background-color: #0066A6;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+  transition: transform 0.3s ease;
+}
+
+.navItems.hidden{transform: translateX(-100%);}
+
+.navHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  /*border-bottom: 0.15rem solid rgba(255,255,255,0.6);*/
+}
+
+.languages{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-bottom: 0.15rem solid rgba(255,255,255,0.5);
+}
+
+.languages .sprite{
+  background-position: 0.1rem 0;
+}
+
+
+.languages > a{
+  display: inline-block;
+  margin-left: 0.4rem; margin-right: 0.4rem;
+  color: #E6E6E6;
+  text-decoration: none;
+}
+
+.languages > a:first-child{
+  margin-left: 0;
+}
+.clsNavItems{order: 2;}
+
+.userName{
+  display: block;
+  width: 100%;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  word-wrap: break-word;
+}
+
+
+.navbar li > a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  text-decoration: none;
+  word-wrap: break-word;
+  color: #E6E6E6;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar li:nth-child(1) > a > .sprite{
+  background-position: -3.8rem  0;
+}
+
+.navbar li:nth-child(2) > a > .sprite{
+  background-position: -7.6rem 0;
+}
+
+.navbar li:nth-child(3) > a > .sprite{
+  background-position: -11.6rem 0;
+}
+
+.navbar li:nth-child(4) > a > .sprite{
+  background-position: -15.6rem 0;
+}
+
+.navbar li > a:hover, .navbar li > a:focus, .navbar li > a.active{
+  transform: translateX(1.5%);
+  text-shadow: 0px 0px 1.2rem #FFFFFF;
+}
+
+/*----------------------------------------
+#                                        #
+#               ACtion Buttons           #
+#                                        #
+------------------------------------------*/
+
+.actions-container{
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 7rem;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+  background-color: #004E80;
+  z-index: 1;
+}
+
+.actions-container button{
+  display: block;
+  outline: none;
+  border: none;
+  padding: 1rem 0.8rem;
+  width: 9rem;
+  font-size: 1.6rem;
+  color: #D9D9D9;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.actions-container button:hover{
+  background-color: #0074BD;
+  text-shadow: 0px 0px 1.2rem #FFFFFF;
+}
+
+.actions-container .sprite1{
+  margin: 0 auto 1rem;
+  height: 3.5rem;
+  width: 3.6rem; 
+  background: url('../images/AdminActions1.png') no-repeat scroll;
+  background-size: auto 3.5rem;
+}
+
+.actions-container .sprite2{
+  margin: 0 auto 1rem;
+  height: 3.7rem; width: 5.2rem;
+  background: url('../images/AdminActions2.png') no-repeat scroll;
+  background-size: auto 3.7rem;
+}
+
+.actions-container .selectAll .sprite1{
+  background-position: 0.4rem 0;
+}
+
+.actions-container .addJobPosting .sprite1{
+  background-position: -3.43rem 0;
+}
+
+.actions-container .deleteJobPosting .sprite1{
+  background-position: -7.23rem 0;
+}
+
+.actions-container .openJobPosting .sprite1{
+  background-position: -6.96em 0;
+}
+
+.actions-container .closeJobPosting .sprite1{
+  background-position: -15rem 0;
+}
+
+.actions-container .selectAll .sprite2{
+  background-position: 1.3rem 0;
+}
+
+.actions-container .acceptFile .sprite2{
+  background-position: -4rem 0;
+}
+
+.actions-container .denyFile .sprite2{
+  background-position: -9.3rem 0;
+}
+/*** Navigation Bar ***/
+
+/*
+navbar color #E6E6E6
+navbar items
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+  background-color: #0071BC;
+
+navbar button backgrund #5DA5D4
+
+*/
+
+
+/*----------------------------------------
+#                                        #
+#                 Modal                  #
+#                                        #
+------------------------------------------*/
+.modalContainer{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+
+.modalContainer.darken{
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modalContainer.hidden{
+  display: none;
+}
+
+.modal{
+  width: 50%;
+  margin-top: 3vh;
+  font-size: 1.8rem;
+  box-shadow: 0 0 3px 1px rgba(2,39,119,0.17);
+  background-color: #F7FFFB;
+  border-radius: 2.5rem;
+  opacity: 0;
+  transform: translate3d(0, -5%, 0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.hidden{
+  display: none;
+}
+
+.modalHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 3rem 3.5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  color: #D9D9D9;
+  background-color: #004E80;
+}
+
+button.clsModal{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  color: #D9D9D9;
+  cursor: pointer;
+}
+
+.modalBody{
+  padding: 2.5rem 0;
+  margin-top: -2.8rem;
+  border-radius: 2.5rem;
+  background-color: #F4FEFF;
+}
+.modalBody > div{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  overflow: auto;
+  height: 72vh;
+}
+
+/*----------------------------------------
+#                                        #
+#                 Prompt                 #
+#                                        #
+------------------------------------------*/
+
+.prompt{
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 40%;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #EEFFF6;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(67,84,75,0.85);
+  transform: translate3d(0, -5%, 0);
+  transition: transform 0.3s ease, opacity 0.3s ease;  
+  /**************/
+}
+
+.prompt.hidden{display: none;}
+
+
+.prompt .prompt-actions{
+  display: block;
+  text-align: center;
+  margin: 1rem auto 0;
+  width: 21.5rem;
+}
+
+.prompt-actions.hidden{
+  display: none;
+}
+.prompt button{
+  min-width: 10.3rem;
+  font-size: 1.6rem;
+}
+/*** View Job Posting Modal ***/
+#viewJobPostingMdl .jobinfo{
+  position: relative;
+}
+
+#viewJobPostingMdl .jobinfo > span{
+  display: block;
+}
+
+#viewJobPostingMdl .jobtitle{
+  font-size: 2.2rem;
+  color: #404040;
+}
+
+#viewJobPostingMdl .joblocation, #viewJobPostingMdl .date{
+  font-size: 1.4rem;
+  color: #333333;
+}
+
+#viewJobPostingMdl .editJobPosting{
+  position: absolute; top: 0; right: 0;
+  font-size: 1.4rem;
+  margin-top: 0.5rem; margin-bottom: 0.5rem;
+}
+
+#viewJobPostingMdl hr{
+  margin-top: 1rem; margin-bottom: 1rem;
+  border: none;
+  border-top: 0.1rem solid #8A8A8A;
+}
+
+#viewJobPostingMdl p{
+  font-size: 1.6rem;
+  color: #333333;
+}
+
+/*** Add Job Posting Modal ***/
+
+#addJobPostingMdl .Label{
+  padding-right: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+#addJobPostingMdl .Form > div{
+  padding-right: 1.8rem; padding-left: 1.8rem;
+  margin-top: 2rem; margin-bottom: 2rem;
+}
+
+#addJobPostingMdl .textarea{
+  min-height: 50vh;
+}
+
+#addJobPostingMdl .btn1{
+  width: 15rem;
+  margin: 0 auto 2rem;
+  font-size: 1.6rem;
+}
+/* For Admin Only */
+
+#viewJobPostMdl .deleteJobPost > button.btn3{font-size: 1.8rem; width: 17.5rem;}
+
+.saveChanges.hidden{display: none;}
+
+#viewJobPostMdl button.saveChanges{font-size: 1.8rem; width: 17.5rem;}
+/* For Recruit Only */
+#viewJobPostMdl .applyJob > button{font-size: 1.8rem; width: 10em;}
+
+/*** Create A New Job Post Modal ***/
+
+
+.fadeInDown {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/*----------------------------------------
+#                                        #
+#                Dashboard               #
+#                                        #
+------------------------------------------*/
+
+
+.notifContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  width: 75rem; margin: 0 auto;
+}
+
+.notif{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23rem;
+  min-height: 11rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: green;
+  color: #E6E6E6;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.25s ease;
+}
+
+.notif:nth-child(1){background-color: #3CB371;}
+.notif:nth-child(2){background-color: #297C90;}
+.notif:nth-child(3){background-color: #C04137;}
+.notif:nth-child(4){background-color: #CD6D26;}
+.notif:nth-child(5){background-color: #665C37;}
+
+.notif:hover{opacity: 0.7}
+
+
+/*----------------------------------------
+#                                        #
+#          Recruit Progress Page         #
+#                                        #
+------------------------------------------*/
+.recruitProgress{color: #595959; }
+.recruitProgress > div:nth-child(1){
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.1em solid #3CB371;
+}
+.recruitProgress .jobTitle{
+  font-size: 2.7rem;
+  color: #595959;
+  letter-spacing: -0.01em;
+  word-spacing: -0.01em;
+}
+.recruitProgress .date{font-size: 1.6rem;}
+
+.recruitStep{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.recruitStep > div:nth-child(1){
+  padding-right: 1.2rem;
+}
+
+.recruitStep > div:nth-child(2){
+  font-size: 1.6rem;
+}
+
+.recruitProgress .stepTitle{
+  font-size: 2.7rem;
+  color: #595959;
+  letter-spacing: -0.02em;
+  word-spacing: -0.02em;
+  display: block;
+}
+
+.recruitStep .status{display:none; color: #1769E6;}
+.recruitStep .status.opened{display:inline;}
+
+.stepSVG{
+  width: 4rem;
+  display: block;
+}
+
+.stepSVG .circles{fill: #A6DCBE;}
+.stepSVG .circles.opened{fill: #3CB371;}
+.stepSVG .paths{
+  stroke: #A6DCBE;
+  stroke-width: 0.5rem;
+  fill: none;
+}
+
+.stepSVG .paths.opened{stroke: #3CB371;}
+
+.recruitProgress form{display: none;}
+.recruitProgress form.opened{display: block;}
+
+.recruitProgress button.btn1{margin-top: 1.8rem; font-size: 1.8rem;}
+
+
+/*----------------------------------------
+#                                        #
+#                 Tabs                   #
+#                                        #
+------------------------------------------*/
+
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-bottom: 0.2rem solid #60B586;/*C, the first value is relative to '.tabs .tab-item' margin-bottom property*/
+}
+
+.tabs .tab-item {
+  margin-bottom: 0.7rem;/*C, the value relative to '.tabs .tab-item' margin-bottom property*/
+}
+
+.tabs .tab-link {
+  border: 0.2rem solid transparent;/*C, the first value is relative to '.tabs .tab-item' margin-bottom property*/
+  border-top-left-radius: 0.25rem;/*C*/
+  border-top-right-radius: 0.25rem;/*C*/
+  font-size: 1.8rem; text-decoration: none;/*C*/
+  color: #4D4D4D;
+  padding: 0.7rem 1.7rem;/*C*/
+}
+
+.tabs .tab-link:hover, .tabs .tab-link:focus {
+  border-color: #e9ecef #e9ecef #dee2e6;/*C*/
+}
+
+.tabs .tab-link.active{
+  border-color: #60B586 #60B586 #fff;/*C*/
+}
+
+.tab-content > .tab-pane {
+  display: none;
+  font-size: 1.6rem;/*C*/
+  opacity: 0;/*C, you can add different effect, like transform*/
+  transition: /*C*/opacity/*C*/ 0.3s ease;  /*the opacity is the effect, you can add different effect like transform*/
+}
+
+.tab-content > .tab-pane.active {
+  display: block;
+}
+.tab-content > .tab-pane.show{
+  opacity: 1;/*the opacity is the effect, you can add different effect like transform*/
+}
+
+
+/*----------------------------------------
+#                                        #
+#                 Table                  #
+#                                        #
+------------------------------------------*/
+
+.table-container{
+  width: 91rem;
+  margin: 0 auto;
+  overflow-x: auto;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  color: #4D4D4D;
+  table-layout: fixed ;
+  width: 90rem ;  
+}
+
+tr{border-bottom: 0.083em solid #B3B3B3;}
+
+thead > tr{
+  background-color: rgba(41,128,185, 0.15);
+}
+
+tr:nth-child(even){
+  background-color: rgba(41,128,185, 0.15);
+}
+
+th, td {
+  width: 25% ;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+table a{
+  color: #2980B9;
+  text-decoration: none;
+}
+table a:hover{
+  text-decoration: underline;
+}
+/*----------------------------------------
+#                                        #
+#   <html> Font Sizes in All Viewport    #
+#                                        #
+------------------------------------------*/
+
+@media only screen and (min-width: 1280px) {
+  html{
+    font-size: 0.78125vw;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  html{
+    font-size: 9.95px;
+  }
+}
+
+
+/* Font size varies from 9.9px to 9.5px */
+@media only screen and (max-width: 900px) {
+  html{
+    font-size: calc(9.5px +  ( (100vw - 500px) *  0.001 ) );
+  }
+}
+
+/* Font size varies from 9.5px to 9.3px */
+@media only screen and (min-width: 375px) and (max-width: 500px) {
+  html{
+    font-size: calc(9.3px +  ( (100vw - 375px) *  0.0016 ) );
+  }
+}
+
+
+
+/*----------------------------------------
+#                                        #
+#     Layouts in All Viewport Sizes      #
+#                                        #
+------------------------------------------*/
+
+@media only screen and (max-width: 800px){
+
+  .landing, .AuthSection{
+    background-size: auto 100vh;
+  }
+
+  .notifContainer{
+    width: 65rem;
+  }
+  .notif{
+    width: 20.66rem;
+  }
+  .landing{
+    background-size: auto 100vh;
+  }
+
+  .sectionPadding{
+    padding-left: 5vw; padding-right: 5vw;
+  }
+
+  .cards1Container{width: 64.9rem;}
+  .cards1 > button{width: 27.8rem;}
+  .cards1 .cardDesc{width: 79%;}
+  .cards1 .jobtitle, .cards1 .jobid{max-width: 70%;}
+
+  .actions-container{
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    max-height: 9.8rem;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+  }
+
+  .actions-container button{
+    width: 20%;
+    padding: 1rem 0 0.8rem;
+    overflow: hidden;
+  }
+  .actions-container .sprite1{margin-bottom: 0.2rem;}  
+  .modal{width: 70%;}
+  .prompt{width: 40rem;}
+  .landing .darkOverlay{width: 90%;}
+}
+
+@media only screen and (max-width: 700px){
+  .AuthSection{
+    justify-content: center;
+  }
+  .AuthSection .Form{
+    margin-top: 0;
+  }
+  .notifContainer{
+    width: 50rem;
+  }
+  .notif{
+    width: 24rem;
+  }   
+  .modal{width: 90%;}
+  .modalHeader{padding-left: 2rem; padding-right: 2rem;}
+  .modalBody > div{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px){
+  .notifContainer{
+    width: 47rem;
+  }
+  .notif{
+    width: 22rem;
+  } 
+  .cards1Container {
+      width: 35.4rem;
+      padding-left: 2rem;
+  }    
+  .cards1 > button {
+      width: 30.7rem;
+  }
+  .prompt{width: 35rem}
+}
+
+
+@media only screen and (max-width: 500px){
+  .AuthSection .Form{
+    width: 80%;
+  }
+  .notifContainer{
+    width: 36.2rem;
+  }
+  .notif{
+    font-size: 1.7rem;
+    width: 17.1rem;
+    min-height: 12rem;
+  } 
+  .cards1Container {
+      width: 35.5rem;
+      padding-left: 0;
+  }
+}

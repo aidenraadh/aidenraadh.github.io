@@ -1,0 +1,1025 @@
+/******************************** global rules ********************************/
+
+html{
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*{-webkit-box-sizing: border-box;box-sizing: border-box; padding: 0; margin: 0; outline: none;}
+*:before,
+*:after{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container-fluid:before,
+.container-fluid:after{
+  content: " ";
+  display: table;
+}
+
+.container-fluid:after{clear: both;}
+
+@font-face{
+  font-family: 'Montserrat Medium';
+  src: url('../fonts/Montserrat-Medium.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Myriad Pro';
+  src: url('../fonts/Myriad-Pro.ttf') format('truetype');
+}
+
+.montserratMedium{font-family: 'Montserrat Medium', sans-serif; font-style: normal; font-weight: normal;}
+
+.montserratSemibold{
+  font-family: 'Montserrat Medium', sans-serif; 
+  font-weight: 600; letter-spacing: -0em;
+}
+
+.myriadPro{font-family: 'Myriad Pro', sans-serif; font-style: normal; font-weight: normal;}
+
+.myriadProBold{font-family: 'Myriad Pro', sans-serif;font-weight: 800; letter-spacing: 0.025em;}
+
+.section-padding{padding: 7rem 10vw 0;}
+
+.section-padding.firstSection{min-height: 100vh;}
+
+.btn1, .btn2{
+  display: block; padding: 0.4em 0; border: none;
+  border-radius: 1rem; font-family: 'Myriad Pro';
+  text-align: center; text-decoration: none;
+  color: white; -webkit-transition: background-color 0.2s linear; -o-transition: background-color 0.2s linear; transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.btn1{
+  border: none;
+  background-color: #0F8C75; 
+}
+
+.btn1:hover, .btn1:focus{
+  text-decoration: none;
+  color: white;
+  background-color: #3BA18E;
+}
+
+.btn2{
+  background-color: #0279BF; 
+  border-color: #0279BF;
+}
+
+.btn2:hover, .btn2:focus{
+  text-decoration: none;
+  color: white;
+  background-color: #028CDE;
+}
+
+ .stepsContainer{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+ }
+
+ .step{
+   width: 2.6rem;
+   font-size: 1.4rem;
+   text-align: center;
+   color: #0289D9;
+ }
+
+ .step svg{width: 100%;}
+
+ .step .outerCircle{fill:none; stroke-miterlimit:10;stroke-width:0.4rem;}
+
+ .step .innerCircle{fill:#0289D9;}
+
+ .step .okmark{
+  fill:none;
+  stroke:#0289D9;
+  stroke-miterlimit:10;
+  stroke-width:0.4rem;
+}
+
+ .step div{
+  min-width: 5rem;
+  transform: translateX(-1rem);
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+ }
+
+ .completed .outerCircle{stroke:#0289D9;}
+
+ .completed .innerCircle{display: none;}
+
+ .completed .okmark{display: block;}
+
+ .current .outerCircle{stroke:#0289D9;}
+
+ .current .innerCircle{display: block;}
+
+ .current .okmark{display: none;}
+
+ .incompleted .outerCircle{stroke:#b3b3b3;}
+
+ .incompleted .innerCircle{display: none;}
+
+ .incompleted .okmark{display: none;}
+
+ .bar{width: 12rem; height: 2rem;}
+
+ .bar path{fill:none;stroke:#b3b3b3;stroke-miterlimit:10;stroke-width:0.25rem;}
+
+ .filled.bar path{stroke:#0289D9;}
+
+@media screen and (min-width: 2000px){
+  #layananKami .sprite-cont{background: url('../img/icons/layananKami+2000px.png') no-repeat scroll 0 0;}
+}
+@media screen and (max-width: 2000px){
+  #layananKami .sprite-cont{background: url('../img/icons/layananKami-2000px.png') no-repeat scroll 0 0;}
+}
+@media screen and (max-width: 800px){
+  #layananKami .sprite-cont{background: url('../img/icons/layananKami-800px.png') no-repeat scroll 0 0;}
+}
+
+@-webkit-keyframes slideLeft{
+  0%{transform: translateX(20%); opacity: 0;}
+  100%{transform: translateX(0%); opacity: 1;}  
+}
+@keyframes slideLeft{
+  0%{transform: translateX(20%); opacity: 0;}
+  100%{transform: translateX(0%); opacity: 1;}  
+}
+
+.slideLeft{
+  transform: translateX(20%);
+  opacity: 0;
+  -webkit-animation: slideLeft 0.6s ease 0.1s;
+          animation: slideLeft 0.6s ease 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/** <> Modal <> **/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0);
+  }
+}
+@keyframes fadeInUp {
+
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0);
+  }
+}
+
+.fadeInUp{
+  animation: fadeInUp 0.3s ease;
+  animation-fill-mode: both;
+}
+
+/*Show modal content animation*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 5%, 0);
+            transform: translate3d(0, 5%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp{
+  animation: fadeInUp 0.5s ease;
+  animation-fill-mode: both;
+}
+
+.modal-container{
+  position: fixed; top: 0; left: 0;
+  display: flex;
+  flex-flow: row wrap; 
+  align-content: center;
+  justify-content: center;
+  width: 100%; height: 100vh;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.modal-container.hidden{display: none}
+.modal-container.darkBG{
+  background-color: rgba(0,0,0,0.4);
+}
+.modal{
+  border-radius: 2rem;
+  width: 60rem;
+  text-align: left;
+  color: #565555;
+  background-color: #F2F7FF;
+  box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  opacity: 0;
+  transform: translate3d(0, -10%, 0); 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.modal.shown{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);       
+}
+.modalHeader{
+  display: flex;
+  justify-content: space-between;
+  background-color: #0289D9;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.5rem 2rem 5.5rem;
+  color: #F2F7FF;
+}
+.modalHeader > h5{font-size: 2rem;}
+.modalBody{
+  margin-top: -4rem;
+  padding: 1.5rem 2rem 0;
+  font-size: 1.6rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: #F2F7FF;
+}
+.modalFooter{
+  /*background-color: red;*/
+  background-color: #F2F7FF;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 0 2rem 2rem;
+  font-size: 1.6rem;
+}
+#SPModel > .modal{
+  width: 45rem;
+}
+#SPModel form{
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+#SPModel label{
+  display: block;
+  margin-bottom: 1.5rem;
+}
+#SPModel input{
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-bottom: 2.8px solid #8EA681;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: #292929;
+}
+#SPModel .btn2{
+  float: right;
+  width: 11rem;
+  font-size: 1.8rem;
+}
+
+
+button.clsModal{
+  position: absolute; top: 1.1rem; right: 2.7rem; padding: 0 1rem;
+  border: none; font-size: 3.5rem; background-color: transparent; 
+  color: white;
+  cursor: pointer;
+}
+/** <> Modal <> **/
+
+/** Live Chat **/
+
+.livechat{
+  display: none;
+  z-index: 3;
+  position: fixed; left: 4rem; bottom: 14rem;
+  width: 30rem; height: 38rem;
+  border-radius: 2rem;
+  background-color: #F2F7FF;
+  box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: transform 0.3s ease, opacity 0.3s ease;    
+}
+.livechat.shown{
+  display: block;
+}
+.livechat.zoomIn{
+  opacity: 1;
+  transform: scale(1);
+}
+.livechat .header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #0289D9;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.5rem 2rem 5.5rem;
+  color: #F2F7FF;      
+}
+.livechat .header > h5{font-size: 2rem;}
+.livechat .body{
+  margin-top: -4rem;
+  padding: 1.5rem 2rem 1.5rem;
+  font-size: 1.6rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: #F2F7FF;
+}
+.livechat textarea{
+  padding-top: 0.5rem; width: 100%; min-height: 25rem; border: none;
+  background-color: transparent; font-family: 'Myriad Pro';
+  font-size: 1.8rem; line-height: 1; 
+  color: #565555; -webkit-transition: border-color 0.2s; -o-transition: border-color 0.2s; transition: border-color 0.2s; 
+  border-bottom: 2.8px solid #8EA681; cursor: pointer;   
+}
+.livechat .send{
+  margin-top: 0.5rem;
+  float: right;
+  background-color: transparent;
+  border: none;
+  cursor: pointer
+}
+.livechat .send > img{
+  width: 3rem; height: auto;
+}
+.opnLiveChat{
+  z-index: 1;
+  position: fixed; left: 4rem; bottom: 4rem;
+  background-color: #0F8C75;
+  border: none;
+  width: 8rem; height: 8rem;
+  border-radius: 100%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-align: center;
+  cursor: pointer;
+}
+.opnLiveChat img{width: 4.8rem; height: auto; transform: translateY(0.5rem);}
+button.clsLiveChat{
+  position: absolute; top: 1.1rem; right: 2.7rem; padding: 0 1rem;
+  border: none; font-size: 3.5rem; background-color: transparent; 
+  color: white;
+  cursor: pointer;
+}
+
+/** <> Live Chat <> **/
+
+/******************************** </>global rules ********************************/
+
+
+/******************************** index.html Page ********************************/
+
+/** <> #header Section <> **/
+
+.navbar{
+  position: fixed; top: 0; left: 0; overflow: hidden; padding: 0; margin: 0; 
+  width: 100%;
+  font-size: 1.9rem;
+  background-color: #2D3742;
+  -webkit-box-shadow: 0px 0.2px 9px #3B3B3B;
+          box-shadow: 0px 0.2px 9px #3B3B3B;
+  z-index: 2;
+}
+
+.openItems{
+  display: none;
+  padding: 0.63rem 0.6rem 0.1rem 0.6rem;
+  margin: 1rem 1rem;
+}
+
+.closeItems{
+  display: none; 
+  padding: 0.63rem 0.6rem 0.1rem 0.6rem;
+  margin: 0.7rem 1rem;
+}
+
+.openItems.right{float: right;}
+.closeItems.left{float: left;}
+.openIcon, .closeIcon{width: 2.5rem;}
+.openIcon path, .closeIcon path{fill: #E3E3E3;}
+
+.navItems{
+  padding: 0; margin: 0; background-color: #2D3742; 
+  -webkit-transform: translateX(0px); 
+      -ms-transform: translateX(0px); 
+          transform: translateX(0px);
+}
+.navItems.right{float: right;}
+.navbar ul{list-style-type: none; padding: 0; margin: 0;}
+.navbar li{float: left; padding: 0; margin: 0;}
+
+.navbar li > a{
+  display: inline-block; 
+  padding: 0.9em 1.1em;
+  margin: 0;
+  text-decoration: none; 
+  -webkit-transition: background-color 0.2s ease; 
+  -o-transition: background-color 0.2s ease; 
+  transition: background-color 0.2s ease; 
+  color: white;
+}
+
+.navbar li > a:hover, .navbar li > a.active{background-color: #5D7187;}
+#header{background: url('../img/headerBg.jpg') no-repeat scroll right bottom; background-size: auto 575px;}
+#header article{margin-top: 4rem;}
+#header article h1{margin-top: 1rem; margin-bottom: 1.5rem; font-size: 3.5rem; font-weight: bold; color: rgb(71, 71, 71);}
+#header article p{margin-bottom: 2rem; font-size: 2rem;}
+
+.rprNow{
+  z-index: 1;
+  position: fixed; right: 6rem; bottom: 4rem;
+  padding-top: 1.3rem; padding-bottom: 1.3rem;
+  border: none;
+  width: 22rem;
+  font-family: 'Myriad Pro';
+  font-size: 2.3rem;
+  text-decoration: none;
+  text-align: center;  
+  border-radius: 30px;
+  background-color: #4EA320;
+  color: white;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;  
+  -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  cursor: pointer;  
+}
+
+.rprNow:hover, .rprNow:focus{
+  background-color: #57B524;
+}
+
+/** </> #header Section </> **/
+
+/** <> #layananKami Section <> **/
+
+#layananKami{
+  text-align: center;
+  color: white;
+  background: -o-linear-gradient(300deg, #2CB3E0 0%, 30.64%, #1E94EB 50.88%, 87%, #2CB3E0 100%);
+  background: linear-gradient(150deg, #2CB3E0 0%, 30.64%, #1E94EB 50.88%, 87%, #2CB3E0 100%);
+  /*background: linear-gradient(140deg, #22e1ff 18.76%, #1D8FE1 75.47%);*/
+  font-size: 1.6rem;
+  padding-bottom: 15rem;
+}
+
+#layananKami article{overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start;}
+
+#layananKami section{
+  width: 25%;
+  padding: 0 0.625em; margin: 0 0 2.0625em 0;
+}
+
+#layananKami .sprite-cont{width: 10rem; height: 10rem; margin: 0 auto; background-size: auto 10rem;}
+#layananKami h2{font-size: 3.6rem; margin-bottom: 1.2em; color: white; width: 100%;}
+#layananKami h3{font-size: 2.4rem; margin-bottom: 0.6em; color: white;}
+#layananKami section:nth-child(2) > .sprite-cont{background-position-x: 0; }
+#layananKami section:nth-child(3) > .sprite-cont{background-position-x: -10.281rem;}
+#layananKami section:nth-child(4) > .sprite-cont{background-position-x: -20.5rem;}
+#layananKami section:nth-child(5) > .sprite-cont{background-position-x: -30.8rem;}
+#layananKami span{letter-spacing: 0;}
+
+/** </> #layananKami Section </> **/
+
+/** <> #whyDalvis Section <> **/
+#whyDalvis{
+  background-color: #F2F7FF; color: #565555;font-size: 1.6rem; text-align: left; overflow: hidden;
+}
+
+#whyDalvis h2{font-size: 3.6rem; margin-bottom: 3rem; text-align: center;}
+#whyDalvis h2 > span{display: inline-block; background-color: #0289D9; color: white; padding: 0.08em 0.5em; border-radius: 1.3rem;}
+#whyDalvis h3{font-size: 2.4rem; margin-bottom: 0.5rem; margin-top: 0;}
+#whyDalvis section{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; margin-bottom: 3rem;}
+#whyDalvis section:nth-child(odd){-webkit-box-pack: end;-ms-flex-pack: end;justify-content: flex-end;}
+#whyDalvis section > div:nth-child(2){width: 50%;}
+#whyDalvis .sprite-cont{margin-top: 0.9rem; margin-right: 0.8rem; width: 9.5rem; height: 9.5rem;
+  background: url('../img/icons/whyDalvisSprite.png') no-repeat scroll 0 0; background-size: auto 9.5rem;
+}
+
+#whyDalvis section:nth-child(3) > .sprite-cont{background-position-x: -9.9rem;}
+#whyDalvis section:nth-child(4) > .sprite-cont{background-position-x: -19.75rem;}
+#whyDalvis section:nth-child(5) > .sprite-cont{background-position-x: -29.6rem;}
+#whyDalvis section:nth-child(6) > .sprite-cont{background-position-x: -39.5rem;}
+
+/** </>#whyDalvis Section **/
+#ourContact{
+  text-align: center;
+  color: white;
+  background: -o-linear-gradient(300deg, #2CB3E0 0%, 30.64%, #1E94EB 50.88%, 87%, #2CB3E0 100%);
+  background: linear-gradient(150deg, #2CB3E0 0%, 30.64%, #1E94EB 50.88%, 87%, #2CB3E0 100%);
+  /*background: linear-gradient(140deg, #22e1ff 18.76%, #1D8FE1 75.47%);*/
+  font-size: 1.6rem;
+  padding-bottom: 15rem;
+}
+#ourContact h2{font-size: 3.6rem; margin-bottom: 1.2em; color: white; width: 100%;}
+
+/** <> .footer Section <> **/
+
+.footer{
+  text-align: left;
+  color: white;
+  padding: 2rem;
+  background: #2D3742;
+  font-size: 1.4rem;
+}
+
+/** </> #footer Section </> **/
+
+/******************************** </>index.html Page ********************************/
+
+
+/******************************** All specifying gadget Page ********************************/
+
+.specifizeGadget{min-height: 95vh; text-align: center; background-color: #F2F7FF; 
+  color: #4F4E4E;
+}
+
+.specifizeGadgetHeader{width: 100%; margin-bottom: 2.5rem;}
+
+.specifizeGadget h1{font-size: 2.4rem; margin: 0 0 2rem; width: 100%;}
+
+.itemsContainer{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; margin: 0 auto;
+}
+.itemsContainer.threeItems{width: 43.5rem;}
+.itemsContainer.fourItems{width: 58rem;}
+/*1280 width = 145px*/
+.itemsContainer > .item{
+  margin-bottom: 3rem;
+  width: 14.5rem; height: 13.5rem;
+  text-decoration: none; border: none;
+  border-radius: 1em; color: #474747; background-color: transparent;
+  cursor: pointer; -webkit-transition: -webkit-transform 0.2s linear; transition: -webkit-transform 0.2s linear; -o-transition: transform 0.2s linear; transition: transform 0.2s linear; transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.itemsContainer .sprite-cont{-webkit-transition: opacity 0.2s linear;-o-transition: opacity 0.2s linear;transition: opacity 0.2s linear;}
+.itemsContainer span{width: 100%;  font-size: 1.85rem;}
+
+.itemsContainer > .item:hover, .itemsContainer > .item:focus{
+  text-decoration: none; -webkit-transform: scale(1.06); -ms-transform: scale(1.06); transform: scale(1.06);
+}
+.itemsContainer > .item:hover > .sprite-cont, .itemsContainer > .item:focus > .sprite-cont{
+  opacity: 0.7;
+}
+
+.gadgetType > .sprite-cont{
+  margin: 0 auto; height: 10.7rem; width: 11.056rem;
+  background: url('../img/icons/gadgetTypeSprite.png') no-repeat scroll 0 0; 
+  background-size: auto 10.7rem;
+}
+
+.gadgetType:nth-child(1) > .sprite-cont{background-position-x: 0;}
+.gadgetType:nth-child(2) > .sprite-cont{background-position-x: -11.2rem;}
+.gadgetType:nth-child(3) > .sprite-cont{background-position-x: -22.2rem;}
+
+.spType > .sprite-cont{
+  margin: 0 auto 0.8rem; height: 8.7rem; width: 10rem; 
+  background: url('../img/icons/spTypeSprite.png') no-repeat scroll 0 0;
+  background-size: auto 8.7rem;
+}
+
+.spType:nth-child(2) > .sprite-cont{background-position-x: -10.30rem;}
+.spType:nth-child(3) > .sprite-cont{background-position-x: -20.5rem;}
+.spType:nth-child(4) > .sprite-cont{background-position-x: -30.5rem;}
+.spType:nth-child(5) > .sprite-cont{background-position-x: -40.7rem;}
+.spType:nth-child(6) > .sprite-cont{background-position-x: -50.7rem}
+
+.spBreakage > .sprite-cont{
+  margin: 0 auto 1rem; height: 8rem; width: 8rem;
+  background: url('../img/icons/spBreakageSprite.png') no-repeat scroll 0 0;
+  background-size: auto 8rem;
+}
+
+.spBreakage:nth-child(2) > .sprite-cont{background-position-x: -8rem;}
+.spBreakage:nth-child(3) > .sprite-cont{background-position-x: -7.5rem;}
+.spBreakage:nth-child(4) > .sprite-cont{background-position-x: -23.3rem;}
+.spBreakage:nth-child(5) > .sprite-cont{background-position-x: -31.2rem}
+.spBreakage:nth-child(6) > .sprite-cont{background-position-x: -38.8rem;}
+.spBreakage:nth-child(7) > .sprite-cont{background-position-x: -46.9rem;}
+.spBreakage:nth-child(8) > .sprite-cont{background-position-x: -54.7rem;}
+.spBreakage:nth-child(9) > .sprite-cont{background-position-x: -62.6rem;}
+
+#SPLainnyaModal .modalBody{width: 45rem; height: 14rem;}
+#SPLainnyaModal input{
+  padding: 0.5rem 0;
+  font-size: 1.6rem;
+  width: 100%;
+  border: none;
+  font-family: 'Myriad Pro';
+  background-color: transparent;
+  color: #292929;
+  border-bottom: 2.8px solid #8EA681;
+  cursor: pointer; 
+}
+
+#SPLainnyaModal .btn1{
+  float: right; margin-top: 2rem; width: 10rem; font-size: 1.6rem;
+  background-color: #0289D9;
+}
+
+.spModel > img{display: block; width: auto; height: 59%; margin: 1.4rem auto 0.6rem;}
+
+/******************************** </>All specifying gadget Page ********************************/
+
+/******************************** All Repairment Detail Page ********************************/
+
+/** <> #repairmentDetail Section <> **/
+
+#repairmentDetail{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; min-height: 120vh;
+  text-align: center; font-size: 1.6rem; color: #4F4E4E; 
+  background-color: #F2F7FF;
+}
+
+#repairmentDetail h1{margin: 0 0 2rem; width: 100%; font-size: 2.4rem;}
+#repairmentDetail section{text-align: left;}
+
+#repairmentDetail .sprite-cont{ display: inline-block; width: 4.5rem; height: 4.5rem; 
+  margin-right: 0.6rem; vertical-align: -50%; background: url('../img/icons/repairmentDetail.png') no-repeat scroll; 
+  background-size: auto 4.5rem; 
+}
+
+/** </> #repairmentDetail Section </> **/
+
+/** <> #gadgetDetail Section <> **/
+
+#gadgetDetail{overflow: hidden; width: 43%;}
+#gadgetDetail h2, #diagnose h2{margin-bottom: 1.5rem; text-align: center; }
+#gadgetDetail .sprite-cont{background-position: 0 0;}
+#diagnose .sprite-cont{background-position: -5rem 0;}
+#gadgetDetail > div{overflow: hidden; border-right: 1.5px solid #BABABA; min-height: 25rem;}
+#gadgetDetail img{float: left; width: 12rem; height: auto; margin-right: 1rem;}
+#gadgetDetail > div > span{display: block; margin-bottom: 0.1rem;}
+
+/** </> #gadgetDetail Section </> **/
+
+/** <> #diagnose Section <> **/
+
+#diagnose{width: 46%; padding-left: 3.5rem;}
+
+#diagnose .brkgForm{
+  padding-top: 1.5rem; width: 100%; border-top: 1.5px solid #BABABA;
+  text-align: left; font-weight: normal !important; font-size: 1.6rem;
+  margin-top: 1rem; display: inline-block;
+}
+
+#diagnose ul{text-align: left; list-style-position: outside;}
+
+#diagnose .brkgForm textarea {
+  padding-top: 0.5rem; width: 100%; border: none;
+  background-color: transparent; font-family: 'Myriad Pro';
+  font-size: 1.8rem; line-height: 1; 
+  color: #292929; -webkit-transition: border-color 0.2s; -o-transition: border-color 0.2s; transition: border-color 0.2s; 
+  border-bottom: 2.8px solid #8EA681; cursor: pointer; 
+}
+
+#diagnose .brkgForm textarea:focus {
+  border-color: #50A621;
+}
+
+#diagnose .brkgForm svg{ position: relative; top: 2px;
+  width: 1.4rem;
+  opacity: 1;
+}
+
+#diagnose .brkgForm svg path{
+  stroke: #0289D9;
+  stroke-width: 1px;
+  fill: none;
+}
+
+/** </> #diagnose Section </> **/
+/** <> #order-info Section <> **/
+
+#order-info{
+  position: fixed; left: 0; bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; width: 100%;          
+  font-size: 1.6rem; text-align: left; background-color: #E8EDF5;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  background-color: #F2F7FF;
+}
+
+#order-info > div{width: 20.4792rem; padding: 2rem 0 2rem; color: #4F4E4E;}
+#price > span{display: block;}
+#continue-order a{width: 15rem; margin-bottom: 0.7rem;}
+/** </> #order-info Section </> **/
+
+/** </>#gadgetDetail Section **/
+#userAddress{min-height: 95vh; font-size: 1.6rem; text-align: center; 
+  background-color: #F2F7FF; color: #4F4E4E;
+}
+
+#userAddress h1{font-size: 2.4rem; margin: 0 0 2rem;}
+
+.formsAndPreview{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 5rem;
+  align-items: flex-start;
+}
+
+#user-forms{width: 40rem; margin-right: 5rem;}
+
+#user-forms > form{display: flex; flex-flow: column wrap; justify-content: flex-start; width: 100%;} 
+
+#user-forms img{
+  display: block; margin-left: 1.5rem; margin-top: 1.2rem; width: 381px; height: 320px; border-radius: 30px;
+  -webkit-box-shadow: 0px 52px 47px -62px rgba(107,107,107,1);
+  -moz-box-shadow: 0px 52px 47px -62px rgba(107,107,107,1);
+  box-shadow: 0px 52px 47px -62px rgba(107,107,107,1);  
+}
+
+.userContact{
+  position: relative; padding-left: 1.5rem; width: 100%; 
+  margin-bottom: 1rem;
+}
+
+.userContact input {
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: #292929;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  border-bottom: 2.8px solid #8EA681;
+  cursor: pointer; 
+}
+
+.userContact svg { position: absolute; top: 0.7rem; left: 0;
+  width: 1.6rem;
+  opacity: 0;
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.userContact svg path {
+  stroke: #0289D9;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.userContact input:focus{border-color: #50A621;}
+.userContact input:focus + svg{-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0); opacity: 1;}
+
+.repPreview{
+  padding: 0 2rem; width: 35rem; border-radius: 10px; text-align: left;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+  box-shadow: 0px 0px 4px 0px rgba(117,116,117,1);
+}
+
+.repPreview > h2{padding: 1.5rem 0; border-bottom: 2px solid #0289D9;}
+
+.preview{overflow:  hidden; padding: 1.5rem 0; border-bottom: 2px solid #0289D9;}
+.preview dt{float: left; clear: left; width: 13rem;}
+.preview dt > span:nth-child(2){float: right; margin-right: 0.5rem;}
+.preview > span{float: left;}
+.preview dd{display: block;}
+
+
+.cb {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+  padding: 0 0 2rem;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  clear: none;
+}
+
+.cb input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  right: 0;
+  height: 23px; width: 23px;
+  border-radius: 5px;
+  color: #50A621;
+  background-color: #DBDBDB;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.checkmark:after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 9px; top: 5px;
+  width: 5px; height: 10px;
+  border-style: solid; 
+  border-color: white;
+  border-width: 0 2px 1px 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.cb:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.cb input:checked ~ .checkmark {
+  background-color: #0289D9;
+}
+.cb input:checked ~ .checkmark:after {
+  display: block;
+}
+/** </>terms&condition Checkbox **/
+
+/******************************** </>All Repairment Detail Page ********************************/
+
+/******************************** Media Queries ********************************/
+/* remove main page background when VP isn't suitable */
+
+@media screen and (min-height: 630px){
+  #header{background: #F2F7FF;}
+}
+
+@media screen and (max-width: 800px), (min-width: 1345px){
+   #header{background: #F2F7FF;}
+}
+
+/*When the viewport width is >= 1280px, 
+the root font size is 0.78125% of the viewport width
+*/
+@media screen and (min-width: 1280px){
+  html{font-size: 0.78125vw;}
+}
+/*When the viewport width is between 801px and 1279px,
+the root font size is 9.6px starting when width 801px, increased
+0.001px every 1px up, and ended at 9.9px at width 1279px
+*/
+@media screen and (min-width: 801px) and (max-width: 1279px){
+  html{font-size: calc(9.5px + ((100vw - 801px) * 0.001) + 0.1px);}
+}
+/*When the viewport width is between 501px and 800px,
+the root font size is 9.1px starting when width 501px, increased
+0.002px every 1px up, and ended at 9.5px at width 800px
+*/
+@media screen and (min-width: 501px) and (max-width: 800px){
+  html{font-size: calc(9px + ((100vw - 501px) * 0.002) + 0.1px);}
+}
+
+/* Tablet Layout */
+@media screen and (max-width: 800px){ 
+  #header{background: #F2F7FF;}
+  .openItems, .closeItems{display: block;}
+
+  .navItems{
+    position: fixed; top: 0; height: 100vh; background-color: #252D36;
+    -webkit-box-shadow: 0.2px 0px 9px #3B3B3B; 
+            box-shadow: 0.2px 0px 9px #3B3B3B;
+  }
+
+  .navItems.right{right: 0; 
+    -webkit-transform: translateX(220px); 
+        -ms-transform: translateX(220px); 
+            transform: translateX(220px);
+  }
+
+  .navItems.trans{-webkit-transition: -webkit-transform 0.3s ease;transition: -webkit-transform 0.3s ease;-o-transition: transform 0.3s ease;transition: transform 0.3s ease;transition: transform 0.3s ease, -webkit-transform 0.3s ease;}
+  .navItems.showed{-webkit-transform: translateX(0px);-ms-transform: translateX(0px);transform: translateX(0px);}
+
+  .navbar li{float: none;}
+  .navbar li > a{padding: 0.9em 5.1em 0.9em 0.9em; width: 100%;}
+
+  .rprNow{
+    font-size: 2.5rem; width: 20rem;
+    right: 5vw;
+  }
+
+  #layananKami section{width: 100%;}
+  #whyDalvis section:nth-child(odd){-webkit-box-pack: start;-ms-flex-pack: start;justify-content: flex-start;}
+  #whyDalvis section > div:nth-child(2){width: 76%;}
+  .itemsContainer.fourItems{/*width: 51rem;*/ width: 43.5rem;}
+  #repairmentDetail section{width: 100%;}
+
+  #gadgetDetail > div{
+    min-height: 0; padding-bottom: 1.8rem; margin-bottom: 1.8rem;
+    border-right: none; border-bottom: 1.5px solid #BABABA
+  }
+
+  #diagnose{
+    padding-left: 0;
+    margin-bottom: 30%;
+  }
+  #user-forms, .repPreview{width: 100%;}
+
+  #user-forms{margin-right: 0; margin-bottom: 5rem;}
+
+  #user-forms img{width: 90%; height: auto;}
+
+  .userContact{width: 100%;}
+}
+
+
+/* Smartphone Layout */
+
+@media screen and (max-width: 500px){
+
+  html{font-size: 8.9px;}
+
+  .rprNow{
+    right: 5vw; bottom: 5rem; padding-top: 1.3rem; padding-bottom: 1.3rem;
+    border-radius: 30px; font-size: 2.5rem; width: 20rem;
+  }
+
+  .opnLiveChat{
+    left: 5vw; 
+  }
+
+  .livechat{
+    left: 5vw; 
+  }
+
+  #layananKami{padding-bottom: 110px;}
+
+  #whyDalvis section > div:nth-child(1){margin-left: auto; margin-right: auto;}
+
+  #whyDalvis section > div:nth-child(2){width: 100%; text-align: center;}
+
+  .stepCont{display: none;}
+  .itemsContainer.threeItems, .itemsContainer.fourItems{width: 29rem;}
+
+  #order-info{
+    justify-content: space-between;
+  }
+
+  #SPModel > .modal{
+    width: 90%;
+  }
+  #order-info > #price{width: 18rem;}
+  #order-info > #continue-order{width: 15rem;}
+  .footer > .container-fluid > div{float: none; width: 100%; padding-top: 5px;}
+
+}

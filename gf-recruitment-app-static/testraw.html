@@ -1,0 +1,183 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="6n9CQsY6IM4QMV1RVuDwW8wt49gUDSgHoiYoDFG1">
+    <title> Admin Home </title>
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar openSans">
+  <button class="opnNavItems">
+    
+  </button>
+  <div class="navItems hidden">
+    <div class="navHead">
+      <button class="clsNavItems"></button>
+      <span class="userTitle openSansSemibold">Admin</span>
+    </div>
+    <span class="userName openSansSemibold">admin1</span>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Dashboard</a></li>
+    </ul>
+  </div>
+</nav>
+<h1 class="usersMainHeading montserratSemibold">Dashboard</h1>
+
+<div class="actions-container openSans">
+  <button class="selectAll" type="button">
+    <div class="sprite1"></div>
+    <span>Select All</span>
+  </button>
+  <button class="addJobPost" type="button">
+    <div class="sprite1"></div>
+    <span>Add</span>
+  </button>
+  <button class="deleteJobPost" type="button">
+    <div class="sprite1"></div>
+    <span>Delete</span>
+  </button>
+  <button class="openJob" type="button">
+    <div class="sprite1"></div>
+    <span>Open</span>
+  </button>
+  <button class="closeJob" type="button">
+    <div class="sprite1"></div>
+    <span>Close</span>
+  </button> 
+</div>
+
+
+
+<section class="sectionPadding openSans" style="font-size: 1.6rem; color: #1A1A1A;">
+<div class="cards1Container">
+
+              <div class="cards1">
+          <button class="viewJobPosting openSans" type="button" modalid="viewJobPostingMdl" jobid="1" opnat="2019-12-08 18:55:36">
+            <div class="cardIcon">
+              <div></div>
+            </div>
+            <div class="cardDesc">
+              <span class="jobtitle">Carpenter</span>
+              <span class="jobid">Job ID: 1</span>
+              <span class="footer">Created At: 2019-11-20 00:18:54</span>
+                        <span class="jobstatus opened">Opened</span>  
+                    
+                              
+            </div>
+          </button>
+          <label class="cbContainer">
+            <input type="checkbox" name="item[]" value="1">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+            <div class="cards1">
+          <button class="viewJobPosting openSans" type="button" modalid="viewJobPostingMdl" jobid="2" opnat="2019-12-08 18:55:36">
+            <div class="cardIcon">
+              <div></div>
+            </div>
+            <div class="cardDesc">
+              <span class="jobtitle">Chef</span>
+              <span class="jobid">Job ID: 2</span>
+              <span class="footer">Created At: 2019-11-20 05:14:41</span>
+                        <span class="jobstatus opened">Opened</span>  
+                    
+                              
+            </div>
+          </button>
+          <label class="cbContainer">
+            <input type="checkbox" name="item[]" value="2">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+            <div class="cards1">
+          <button class="viewJobPosting openSans" type="button" modalid="viewJobPostingMdl" jobid="4" opnat="2019-12-08 18:55:36">
+            <div class="cardIcon">
+              <div></div>
+            </div>
+            <div class="cardDesc">
+              <span class="jobtitle">Data Scientist</span>
+              <span class="jobid">Job ID: 4</span>
+              <span class="footer">Created At: 2019-11-27 22:48:46</span>
+                        <span class="jobstatus opened">Opened</span>  
+                    
+                              
+            </div>
+          </button>
+          <label class="cbContainer">
+            <input type="checkbox" name="item[]" value="4">
+            <span class="checkmark"></span>
+          </label>
+        </div>   
+
+</div>  
+</section>
+
+<div class="modalContainer hidden">
+  <!--
+    Base modal element
+  <section id="__modal__id" class="modal openSans">
+    <div class="modalHeader">
+      <h2 class="montserratSemibold">Heading</h2>
+      <button type="button" class="clsModal openSans" modalid="__modalid__">&times;</button>
+    </div>
+    <div class="modalBody">
+    <div>
+             
+    </div>      
+    </div>
+  </section>
+-->
+  <section id="viewJobPosting openSansMdl" class="modal openSans hidden">
+    <div class="modalHeader">
+      <h2 class="montserratSemibold">Job Posting</h2>
+      <button type="button" class="clsModal openSans">&times;</button>
+    </div>
+    <div class="modalBody">
+    <div>
+      <div class="jobinfo">
+        <span class="jobtitle openSansSemibold"></span>
+        <span class="joblocation getAJAX">EHE</span>
+        <span class="date"></span>
+        <button type="button" class="editJobPosting btn1 openSans">Edit</button>
+      </div>
+      <hr>
+      <p class="getAJAX">
+        EHE
+      </p>
+      <hr>
+    </div>      
+    </div>
+  </section>
+
+<section class="promptModal darkOverlay openSans hidden">
+  <span class="msg"></span>
+  <div class="promptModal-actions">
+    <button type="button" class="submitItemsBtn btn1">Continue</button>
+    <button type="button" class="clsPromptModal btn3">Cancel</button>
+  </div>
+</section> 
+
+</div> 
+
+<!--<form id="deleteJobPost" method="POST">
+  @csrf
+</form>
+
+<form id="openJobPost" method="POST">
+  @csrf
+</form>
+
+<form id="closeJobPost" method="POST">
+  @csrf
+</form>-->
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../js/app.js"></script>
+
+
+</body>
+</html>
